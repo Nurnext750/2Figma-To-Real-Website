@@ -1,11 +1,616 @@
-*{ margin: 0;
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
     padding: 0;
-    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 
+/* =========================
+   BODY / FONT
+========================= */
 
- /* .font .open-sans {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-} */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    padding: 15px 36px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-family: sans-serif;
+
+    color: aliceblue;
+
+    cursor: pointer;
+}
+
+.btn.dark {
+    background-color: #023047;
+}
+
+.btn.light {
+    background-color: #DA722C;
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.wrapper {
+    width: 100%;
+    max-width: 1134px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+
+    background: linear-gradient(
+        180deg,
+        #6f7dfb 0%,
+        #26308c 100%
+    );
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 50px;
+}
+
+
+/* LOGO */
+
+.logo h2 {
+    font-size: 34px;
+    font-weight: 700;
+
+    color: #e2d7d7;
+}
+
+
+/* MENU */
+
+.Menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.Menu li {
+    list-style: none;
+}
+
+.Menu li a {
+    text-decoration: none;
+
+    font-size: 16px;
+
+    color: aliceblue;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 70px;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.hero-section .left {
+    width: 457px;
+
+    flex-shrink: 0;
+}
+
+.hero-section .left h1 {
+    margin-bottom: 15px;
+
+    font-size: 50px;
+    font-weight: 800;
+
+    line-height: 125%;
+
+    color: #e2d7d7;
+}
+
+.hero-section .left p {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+
+    line-height: 200%;
+
+    color: #e2d7d7;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.hero-section .right {
+    position: relative;
+
+    margin-left: auto;
+}
+
+
+/* HERO IMAGE */
+
+.hero-section .right > img {
+    height: 520px;
+
+    width: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   ACHIEVEMENT CARDS
+========================= */
+
+.acivemit-cards {
+    position: absolute;
+
+    left: -150px;
+    top: 250px;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   COMMON CARD
+========================= */
+
+.acivemit-card {
+    position: absolute;
+}
+
+
+/* =========================
+   STUDENT CARD
+========================= */
+
+.acivemit-card.student-enrolled {
+    left: 0;
+    top: 0;
+}
+
+
+/* =========================
+   RATING CARD
+========================= */
+
+.acivemit-card.overall-rating {
+    left: -20px;
+    top: 140px;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.acivemit-card .content {
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 150px;
+
+    padding: 8px 25px 10px;
+
+    background-color: #e2d7d7;
+
+    border-radius: 24px;
+}
+
+
+/* =========================
+   CARD NUMBER
+========================= */
+
+.acivemit-card h3 {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #023047;
+
+    text-align: center;
+    width: 100%;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.acivemit-card p {
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    color: #023047;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CARD BACKGROUND / SHADOW
+========================= */
+
+.acivemit-card .bg {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    top: 8px;
+    left: 8px;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        180deg,
+        #6f7dfb 0%,
+        #3b448f 100%
+    );
+}
+
+
+/* =========================
+   RATING ROW
+========================= */
+
+.acivemit-card .content div {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+
+/* STAR */
+
+.acivemit-card .content div img {
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+}
+
+/* testimonial section */
+
+section{
+    margin: 100px 0;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 120%;
+    color: #023047;
+}
+
+h2.light {
+    color: aliceblue;
+}
+
+section p{
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    margin: 12px 0;
+    color:  #023047;
+    
+}
+
+.testimonial-section{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.testimonial-section .btn .light .test{
+    display: none;
+}
+.testimonial-section .testimonial-card {
+    width: 442px;
+    background: #ffffff;
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.testimonial-section .testimonial-card .contant {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 900;
+    border-radius: 24px;
+    color: #ffffff;
+    background-color: #6F7DFB;
+    padding: 24px 32px;
+
+}
+
+.testimonial-section .testimonial-card:last-child .contant {
+    background-color: #DA722C ;
+}
+
+.testimonial-section .testimonial-card .info h4 {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 900;
+    color: #26308c;
+    margin: 0;
+}
+
+
+.testimonial-section .testimonial-card .info {
+    padding: 24px 24px;
+}
+.testimonial-section .testimonial-card .info p.company{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 120%;
+    color: #023047;
+}
+
+.testimonial-section .testimonial-card img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 32px ;
+    bottom: 20px;
+}
+
+.testimonial-section .testimonial-card:last-child {
+    transform: translateX(20px);
+}
+/* Eand testimoinal sections */
+
+.course{
+    width: 100%;
+    background: linear-gradient(180deg,#6f7dfb 0%, #26308c 100%);
+    padding: 10px 0;
+}
+
+.courses-section h2{
+    text-align: center;
+}
+.courses-section .courses-cards {
+    display: flex;
+    gap: 70px;
+}
+
+.courses-section .courses-cards img {
+    width: 100%;
+    filter:drop-shadow(0px 4px 8px rgba(0, 0, 0,0.25));
+    border-radius: 24px;
+} 
+
+.courses-section .courses-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 0px 32px;
+    margin: 40px 0 ;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.courses-section .courses-card::after{
+
+    content: "";
+    height: 8px;
+    position: absolute;
+    left: 32;
+    right: 32px;
+    bottom: 0;
+    background: #023047;
+    border-radius: 24px;
+}
+
+
+.courses-section .courses-card h3 {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 150%;
+    color: #023047;
+   
+}
+
+.courses-section .info{
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courses-section  .courses-card .duration {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    color: #023047;
+
+}
+
+
+.wrapper .courses-section {
+    position: relative;
+}
+
+.wrapper .courses-section .btn {
+    position: absolute;
+    right: 0;
+    
+}
+
+/* app section */
+ 
+.app-section {
+    text-align: center;
+}
+
+.app-section .app-buttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+  margin-top: 24px;
+    
+}
+.app-section .app-btn {
+    padding: 20px 31px ;
+    gap: 14px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background: #000000;
+    min-width: 310px;
+}
+
+
+footer {
+    background: #023047;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+     
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer h3 {
+    color: #DA722C;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 20px; }
+
+    footer ul li {
+        margin: 16px 0;
+    }
+
+    footer .links-container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 3fr ;
+
+    }
+
+    footer .social {
+        margin-left: 20px;
+    }
+
+      footer .social a {
+        margin-right: 20px;
+    }
+
+    footer form {
+        margin-left: 20px;
+        margin-top: 16px;
+        position: relative;
+    }
+
+    footer form input {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 200%;
+        border-radius: 8px;
+        padding: 8px 32px ;
+        border: none;
+        width: 100%;
+    }
+
+    footer .submit-btn {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 8px;
+        padding: 8px 32px ;
+        border: 0;
+        font-weight: normal;
+        color: #ffffff;
+        background: #023047;
+        padding: 10px 5px;
+    }
+    
+    footer {
+        margin-top: 36px;
+    }
